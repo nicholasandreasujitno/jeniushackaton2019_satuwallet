@@ -64,6 +64,7 @@
     <Compile Include="Activities\PayResultActivity.cs" />
     <Compile Include="Activities\RegisterActivity.cs" />
     <Compile Include="Activities\WalletActivity.cs" />
+    <Compile Include="Adapters\HistoryTransactionAdapter.cs" />
     <Compile Include="Adapters\MainPagerAdapter.cs" />
     <Compile Include="Constants\ApiUrl.cs" />
     <Compile Include="Constants\Platform.cs" />
@@ -74,11 +75,13 @@
     <Compile Include="Fragments\UserFragment.cs" />
     <Compile Include="Helpers\DialogHelper.cs" />
     <Compile Include="Helpers\DrawableCompatMore.cs" />
+    <Compile Include="Helpers\RandomGenerator.cs" />
     <Compile Include="Helpers\RestService.cs" />
     <Compile Include="Helpers\TokenManager.cs" />
     <Compile Include="Interfaces\IResponseAction.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Models\TokenModels.cs" />
+    <Compile Include="Models\TransactionModels.cs" />
     <Compile Include="Models\UserModels.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -263,6 +266,11 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\btn_ripple_effect_light_forcard.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\base_history_list_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
