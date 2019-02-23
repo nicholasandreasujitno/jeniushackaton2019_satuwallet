@@ -7,9 +7,9 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
-namespace satuwallet_android
+namespace satuwallet_android.Activities
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
     public class MainActivity : AppCompatActivity
     {
 
