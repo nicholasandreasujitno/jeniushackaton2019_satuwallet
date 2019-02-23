@@ -8,12 +8,9 @@ android:src="@drawable/logo_1" />-->
       <solid android:color="#2c3e50" />
     </shape>
   </item>
-  <item
-    android:width="@dimen/app_logo_width"
-    android:height="@dimen/app_logo_height"
-    android:gravity="center">
+  <item>
     <bitmap
         android:src="@drawable/app_icon_white_splash_320"
-        android:gravity="fill" />
+        android:gravity="center" />
   </item>
 </layer-list>
