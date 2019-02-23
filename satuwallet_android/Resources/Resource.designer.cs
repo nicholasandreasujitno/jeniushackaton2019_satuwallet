@@ -2314,26 +2314,26 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020088
-			public const int avd_hide_password_1 = 2130837640;
+			// aapt resource value: 0x7f02008f
+			public const int avd_hide_password_1 = 2130837647;
 			
-			// aapt resource value: 0x7f020089
-			public const int avd_hide_password_2 = 2130837641;
+			// aapt resource value: 0x7f020090
+			public const int avd_hide_password_2 = 2130837648;
 			
-			// aapt resource value: 0x7f02008a
-			public const int avd_hide_password_3 = 2130837642;
+			// aapt resource value: 0x7f020091
+			public const int avd_hide_password_3 = 2130837649;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02008b
-			public const int avd_show_password_1 = 2130837643;
+			// aapt resource value: 0x7f020092
+			public const int avd_show_password_1 = 2130837650;
 			
-			// aapt resource value: 0x7f02008c
-			public const int avd_show_password_2 = 2130837644;
+			// aapt resource value: 0x7f020093
+			public const int avd_show_password_2 = 2130837651;
 			
-			// aapt resource value: 0x7f02008d
-			public const int avd_show_password_3 = 2130837645;
+			// aapt resource value: 0x7f020094
+			public const int avd_show_password_3 = 2130837652;
 			
 			// aapt resource value: 0x7f020056
 			public const int btn_ripple_effect = 2130837590;
@@ -2342,148 +2342,169 @@ namespace satuwallet_android
 			public const int btn_ripple_effect_light = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int common_full_open_on_phone = 2130837592;
+			public const int btn_tab_light_p1 = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int common_google_signin_btn_icon_dark = 2130837593;
+			public const int btn_tab_light_p2 = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int common_google_signin_btn_icon_dark_focused = 2130837594;
+			public const int btn_tab_light_p3 = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int common_google_signin_btn_icon_dark_normal = 2130837595;
+			public const int common_full_open_on_phone = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130837596;
+			public const int common_google_signin_btn_icon_dark = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int common_google_signin_btn_icon_disabled = 2130837597;
+			public const int common_google_signin_btn_icon_dark_focused = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int common_google_signin_btn_icon_light = 2130837598;
+			public const int common_google_signin_btn_icon_dark_normal = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int common_google_signin_btn_icon_light_focused = 2130837599;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int common_google_signin_btn_icon_light_normal = 2130837600;
+			public const int common_google_signin_btn_icon_disabled = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int common_google_signin_btn_icon_light_normal_background = 2130837601;
+			public const int common_google_signin_btn_icon_light = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int common_google_signin_btn_text_dark = 2130837602;
+			public const int common_google_signin_btn_icon_light_focused = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int common_google_signin_btn_text_dark_focused = 2130837603;
+			public const int common_google_signin_btn_icon_light_normal = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int common_google_signin_btn_text_dark_normal = 2130837604;
+			public const int common_google_signin_btn_icon_light_normal_background = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int common_google_signin_btn_text_dark_normal_background = 2130837605;
+			public const int common_google_signin_btn_text_dark = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int common_google_signin_btn_text_disabled = 2130837606;
+			public const int common_google_signin_btn_text_dark_focused = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int common_google_signin_btn_text_light = 2130837607;
+			public const int common_google_signin_btn_text_dark_normal = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int common_google_signin_btn_text_light_focused = 2130837608;
+			public const int common_google_signin_btn_text_dark_normal_background = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int common_google_signin_btn_text_light_normal = 2130837609;
+			public const int common_google_signin_btn_text_disabled = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int common_google_signin_btn_text_light_normal_background = 2130837610;
+			public const int common_google_signin_btn_text_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int design_bottom_navigation_item_background = 2130837611;
+			public const int common_google_signin_btn_text_light_focused = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int design_fab_background = 2130837612;
+			public const int common_google_signin_btn_text_light_normal = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int design_ic_visibility = 2130837613;
+			public const int common_google_signin_btn_text_light_normal_background = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int design_ic_visibility_off = 2130837614;
+			public const int design_bottom_navigation_item_background = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int design_password_eye = 2130837615;
+			public const int design_fab_background = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int design_snackbar_background = 2130837616;
+			public const int design_ic_visibility = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int googleg_disabled_color_18 = 2130837617;
+			public const int design_ic_visibility_off = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int googleg_standard_color_18 = 2130837618;
+			public const int design_password_eye = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_home_white_24dp = 2130837619;
+			public const int design_snackbar_background = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_lock_white_24dp = 2130837620;
+			public const int googleg_disabled_color_18 = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_telp_white_24dp = 2130837621;
+			public const int googleg_standard_color_18 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int login_bg4 = 2130837622;
+			public const int home_icons_bg = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int navigation_empty_icon = 2130837623;
+			public const int ic_history_48dp = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int notification_action_background = 2130837624;
+			public const int ic_home_white_24dp = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int notification_bg = 2130837625;
+			public const int ic_lock_white_24dp = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int notification_bg_low = 2130837626;
+			public const int ic_scan_48dp = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int notification_bg_low_normal = 2130837627;
+			public const int ic_telp_white_24dp = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int notification_bg_low_pressed = 2130837628;
+			public const int ic_tfwallet_48dp = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int notification_bg_normal = 2130837629;
+			public const int login_bg4 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int notification_bg_normal_pressed = 2130837630;
+			public const int navigation_empty_icon = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int notification_icon_background = 2130837631;
-			
-			// aapt resource value: 0x7f020086
-			public const int notification_template_icon_bg = 2130837638;
-			
-			// aapt resource value: 0x7f020087
-			public const int notification_template_icon_low_bg = 2130837639;
+			public const int notification_action_background = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int notification_tile_bg = 2130837632;
+			public const int notification_bg = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int notify_panel_notification_icon_bg = 2130837633;
+			public const int notification_bg_low = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int splashscreen_scaled = 2130837634;
+			public const int notification_bg_low_normal = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int tab_bg = 2130837635;
+			public const int notification_bg_low_pressed = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int tooltip_frame_dark = 2130837636;
+			public const int notification_bg_normal = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int tooltip_frame_light = 2130837637;
+			public const int notification_bg_normal_pressed = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int notification_icon_background = 2130837638;
+			
+			// aapt resource value: 0x7f02008d
+			public const int notification_template_icon_bg = 2130837645;
+			
+			// aapt resource value: 0x7f02008e
+			public const int notification_template_icon_low_bg = 2130837646;
+			
+			// aapt resource value: 0x7f020087
+			public const int notification_tile_bg = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int notify_panel_notification_icon_bg = 2130837640;
+			
+			// aapt resource value: 0x7f020089
+			public const int splashscreen_scaled = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int tab_bg = 2130837642;
+			
+			// aapt resource value: 0x7f02008b
+			public const int tooltip_frame_dark = 2130837643;
+			
+			// aapt resource value: 0x7f02008c
+			public const int tooltip_frame_light = 2130837644;
 			
 			static Drawable()
 			{
@@ -2532,8 +2553,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c003f
 			public const int SYM = 2131492927;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int action0 = 2131493059;
+			// aapt resource value: 0x7f0c00c6
+			public const int action0 = 2131493062;
 			
 			// aapt resource value: 0x7f0c0083
 			public const int action_bar = 2131492995;
@@ -2556,17 +2577,17 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0061
 			public const int action_bar_title = 2131492961;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int action_container = 2131493056;
+			// aapt resource value: 0x7f0c00c3
+			public const int action_container = 2131493059;
 			
 			// aapt resource value: 0x7f0c0084
 			public const int action_context_bar = 2131492996;
 			
-			// aapt resource value: 0x7f0c00c7
-			public const int action_divider = 2131493063;
+			// aapt resource value: 0x7f0c00ca
+			public const int action_divider = 2131493066;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int action_image = 2131493057;
+			// aapt resource value: 0x7f0c00c4
+			public const int action_image = 2131493060;
 			
 			// aapt resource value: 0x7f0c0003
 			public const int action_menu_divider = 2131492867;
@@ -2583,14 +2604,14 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0063
 			public const int action_mode_close_button = 2131492963;
 			
-			// aapt resource value: 0x7f0c00d6
-			public const int action_settings = 2131493078;
+			// aapt resource value: 0x7f0c00d9
+			public const int action_settings = 2131493081;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int action_text = 2131493058;
+			// aapt resource value: 0x7f0c00c5
+			public const int action_text = 2131493061;
 			
-			// aapt resource value: 0x7f0c00d0
-			public const int actions = 2131493072;
+			// aapt resource value: 0x7f0c00d3
+			public const int actions = 2131493075;
 			
 			// aapt resource value: 0x7f0c0064
 			public const int activity_chooser_view_content = 2131492964;
@@ -2634,8 +2655,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c009c
 			public const int cameraView = 2131493020;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int cancel_action = 2131493060;
+			// aapt resource value: 0x7f0c00c7
+			public const int cancel_action = 2131493063;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int center = 2131492940;
@@ -2649,8 +2670,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c007a
 			public const int checkbox = 2131492986;
 			
-			// aapt resource value: 0x7f0c00cc
-			public const int chronometer = 2131493068;
+			// aapt resource value: 0x7f0c00cf
+			public const int chronometer = 2131493071;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int clip_horizontal = 2131492949;
@@ -2709,8 +2730,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0038
 			public const int end = 2131492920;
 			
-			// aapt resource value: 0x7f0c00d2
-			public const int end_padder = 2131493074;
+			// aapt resource value: 0x7f0c00d5
+			public const int end_padder = 2131493077;
 			
 			// aapt resource value: 0x7f0c0047
 			public const int enterAlways = 2131492935;
@@ -2754,11 +2775,20 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c002a
 			public const int homeAsUp = 2131492906;
 			
+			// aapt resource value: 0x7f0c00c2
+			public const int home_vwHistory = 2131493058;
+			
+			// aapt resource value: 0x7f0c00c0
+			public const int home_vwPay = 2131493056;
+			
+			// aapt resource value: 0x7f0c00c1
+			public const int home_vwWallet = 2131493057;
+			
 			// aapt resource value: 0x7f0c0069
 			public const int icon = 2131492969;
 			
-			// aapt resource value: 0x7f0c00d1
-			public const int icon_group = 2131493073;
+			// aapt resource value: 0x7f0c00d4
+			public const int icon_group = 2131493076;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int icon_only = 2131492896;
@@ -2769,8 +2799,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0066
 			public const int image = 2131492966;
 			
-			// aapt resource value: 0x7f0c00cd
-			public const int info = 2131493069;
+			// aapt resource value: 0x7f0c00d0
+			public const int info = 2131493072;
 			
 			// aapt resource value: 0x7f0c0060
 			public const int italic = 2131492960;
@@ -2823,17 +2853,17 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c009a
 			public const int main_view_pager = 2131493018;
 			
-			// aapt resource value: 0x7f0c00d5
-			public const int masked = 2131493077;
+			// aapt resource value: 0x7f0c00d8
+			public const int masked = 2131493080;
 			
-			// aapt resource value: 0x7f0c00c6
-			public const int media_actions = 2131493062;
+			// aapt resource value: 0x7f0c00c9
+			public const int media_actions = 2131493065;
 			
-			// aapt resource value: 0x7f0c00d7
-			public const int menu_logout = 2131493079;
+			// aapt resource value: 0x7f0c00da
+			public const int menu_logout = 2131493082;
 			
-			// aapt resource value: 0x7f0c00d3
-			public const int message = 2131493075;
+			// aapt resource value: 0x7f0c00d6
+			public const int message = 2131493078;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int middle = 2131492921;
@@ -2856,14 +2886,14 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0027
 			public const int normal = 2131492903;
 			
-			// aapt resource value: 0x7f0c00cf
-			public const int notification_background = 2131493071;
+			// aapt resource value: 0x7f0c00d2
+			public const int notification_background = 2131493074;
 			
-			// aapt resource value: 0x7f0c00c9
-			public const int notification_main_column = 2131493065;
+			// aapt resource value: 0x7f0c00cc
+			public const int notification_main_column = 2131493068;
 			
-			// aapt resource value: 0x7f0c00c8
-			public const int notification_main_column_container = 2131493064;
+			// aapt resource value: 0x7f0c00cb
+			public const int notification_main_column_container = 2131493067;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int parallax = 2131492947;
@@ -2934,11 +2964,11 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0051
 			public const int right = 2131492945;
 			
-			// aapt resource value: 0x7f0c00ce
-			public const int right_icon = 2131493070;
+			// aapt resource value: 0x7f0c00d1
+			public const int right_icon = 2131493073;
 			
-			// aapt resource value: 0x7f0c00ca
-			public const int right_side = 2131493066;
+			// aapt resource value: 0x7f0c00cd
+			public const int right_side = 2131493069;
 			
 			// aapt resource value: 0x7f0c000c
 			public const int save_image_matrix = 2131492876;
@@ -3045,8 +3075,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0052
 			public const int start = 2131492946;
 			
-			// aapt resource value: 0x7f0c00c5
-			public const int status_bar_latest_event_content = 2131493061;
+			// aapt resource value: 0x7f0c00c8
+			public const int status_bar_latest_event_content = 2131493064;
 			
 			// aapt resource value: 0x7f0c007d
 			public const int submenuarrow = 2131492989;
@@ -3087,8 +3117,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0015
 			public const int textinput_error = 2131492885;
 			
-			// aapt resource value: 0x7f0c00cb
-			public const int time = 2131493067;
+			// aapt resource value: 0x7f0c00ce
+			public const int time = 2131493070;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int title = 2131492892;
@@ -3138,8 +3168,8 @@ namespace satuwallet_android
 			// aapt resource value: 0x7f0c0016
 			public const int view_offset_helper = 2131492886;
 			
-			// aapt resource value: 0x7f0c00d4
-			public const int visible = 2131493076;
+			// aapt resource value: 0x7f0c00d7
+			public const int visible = 2131493079;
 			
 			// aapt resource value: 0x7f0c00af
 			public const int wallet_btnPay = 2131493039;
