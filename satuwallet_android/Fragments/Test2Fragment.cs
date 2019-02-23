@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Android.App;
+
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V4.App;
-using Android.Support.V4.View;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using satuwallet_android.Activities;
 using V4Fragment = Android.Support.V4.App.Fragment;
 
 namespace satuwallet_android.Fragments
 {
-    public class HomeFragment : V4Fragment
+    public class Test2Fragment : V4Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,13 +28,10 @@ namespace satuwallet_android.Fragments
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
-            View view = inflater.Inflate(Resource.Layout.frag_home, container, false);
-
-
+            View view = inflater.Inflate(Resource.Layout.frag_test2, container, false);
 
             return view;
             //return base.OnCreateView(inflater, container, savedInstanceState);
         }
-        
     }
 }
