@@ -1,6 +1,7 @@
 <resources>
   <dimen name="app_logo_width">170dp</dimen>
   <dimen name="app_logo_height">170dp</dimen>
+  <dimen name="app_logo_height_wjenius">223.125dp</dimen>
 
   <dimen name="button_radius_small">5dp</dimen>
   <dimen name="button_radius_large">15dp</dimen>

@@ -10,10 +10,10 @@ android:src="@drawable/logo_1" />-->
   </item>
   <item
     android:width="@dimen/app_logo_width"
-    android:height="@dimen/app_logo_height"
+    android:height="@dimen/app_logo_height_wjenius"
     android:gravity="center">
     <bitmap
-        android:src="@drawable/app_icon_white_splash_320"
+        android:src="@drawable/app_icon_white_splash_320x420"
         android:gravity="fill" />
   </item>
 </layer-list>

@@ -111,7 +111,7 @@ namespace satuwallet_android.Activities
         {
             var adapter = new Adapters.MainPagerAdapter(fragmentManager);
             adapter.AddFragment(new HomeFragment(), "Home", Resource.Drawable.ic_home_white_24dp);
-            adapter.AddFragment(new Test2Fragment(), "Other", Resource.Drawable.ic_telp_white_24dp);
+            adapter.AddFragment(new EasyRegisterFragment(), "Easy Register", Resource.Drawable.ic_telp_white_24dp);
             viewPager1.Adapter = adapter;
             viewPager1.Adapter.NotifyDataSetChanged();
         }
@@ -123,17 +123,17 @@ namespace satuwallet_android.Activities
             var isActive = true;
             for (var i = 0; i < adapter.Count; i++)
             {
-                View view1 = LayoutInflater.Inflate(Resource.Layout.tab_base, null);
-                view1.FindViewById(Resource.Id.tab_icon).SetBackgroundResource(adapter.GetIconResId(i));
-                view1.FindViewById<TextView>(Resource.Id.tab_title).Text = adapter.GetPageTitleFormatted(i).ToString();
+                View view1 = LayoutInflater.Inflate(Resource.Layout.base_tab, null);
+                view1.FindViewById(Resource.Id.basetab_icon).SetBackgroundResource(adapter.GetIconResId(i));
+                view1.FindViewById<TextView>(Resource.Id.basetab_title).Text = adapter.GetPageTitleFormatted(i).ToString();
                 ChangeTabBaseStyle(view1, isActive);
                 tabLayout.GetTabAt(i).SetCustomView(view1);
                 isActive = false;
             }
             
             //View view2 = LayoutInflater.Inflate(Resource.Layout.tab_base, null);
-            //view2.FindViewById(Resource.Id.tab_icon).SetBackgroundResource(adapter.GetIconResId(1));
-            //view2.FindViewById<TextView>(Resource.Id.tab_title).Text = adapter.GetPageTitleFormatted(1).ToString();
+            //view2.FindViewById(Resource.Id.basetab_icon).SetBackgroundResource(adapter.GetIconResId(1));
+            //view2.FindViewById<TextView>(Resource.Id.basetab_title).Text = adapter.GetPageTitleFormatted(1).ToString();
             //ChangeTabBaseStyle(view2, false);
             //tabLayout.GetTabAt(1).SetCustomView(view2);
 
@@ -206,12 +206,12 @@ namespace satuwallet_android.Activities
         {
             var color1 = new Android.Graphics.Color(ContextCompat.GetColor(this, colorResId));
 
-            var tabIcon1 = tabCustomview.FindViewById<ImageView>(Resource.Id.tab_icon);
+            var tabIcon1 = tabCustomview.FindViewById<ImageView>(Resource.Id.basetab_icon);
             var srcImg = tabIcon1.Background;
             var newBg = DrawableCompatMore.GetTintedDrawableOfColorResId(this, srcImg, colorResId);
             tabIcon1.Background = newBg;
 
-            tabCustomview.FindViewById<TextView>(Resource.Id.tab_title).SetTextColor(color1);
+            tabCustomview.FindViewById<TextView>(Resource.Id.basetab_title).SetTextColor(color1);
         }
 
         //private void Vp_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)

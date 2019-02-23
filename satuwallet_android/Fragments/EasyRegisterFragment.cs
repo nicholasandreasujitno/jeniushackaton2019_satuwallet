@@ -14,7 +14,7 @@ using V4Fragment = Android.Support.V4.App.Fragment;
 
 namespace satuwallet_android.Fragments
 {
-    public class Test2Fragment : V4Fragment
+    public class EasyRegisterFragment : V4Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -28,7 +28,7 @@ namespace satuwallet_android.Fragments
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
 
-            View view = inflater.Inflate(Resource.Layout.frag_test2, container, false);
+            View view = inflater.Inflate(Resource.Layout.frag_easyregister, container, false);
 
             return view;
             //return base.OnCreateView(inflater, container, savedInstanceState);

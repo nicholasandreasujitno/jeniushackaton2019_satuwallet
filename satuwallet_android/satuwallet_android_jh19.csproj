@@ -70,7 +70,7 @@
     <Compile Include="Extensions\EnumExt.cs" />
     <Compile Include="Extensions\StringExt.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
-    <Compile Include="Fragments\Test2Fragment.cs" />
+    <Compile Include="Fragments\EasyRegisterFragment.cs" />
     <Compile Include="Helpers\DialogHelper.cs" />
     <Compile Include="Helpers\DrawableCompatMore.cs" />
     <Compile Include="Helpers\RestService.cs" />
@@ -154,7 +154,7 @@
     <AndroidResource Include="Resources\drawable\login_bg4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\app_icon_white_splash_320.PNG" />
+    <AndroidResource Include="Resources\drawable\app_icon_white_splash_320x420.PNG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_lock_white_24dp.xml" />
@@ -166,7 +166,7 @@
     <AndroidResource Include="Resources\layout\frag_home.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\frag_test2.axml" />
+    <AndroidResource Include="Resources\layout\frag_easyregister.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\ic_home_white_24dp.xml" />
@@ -181,16 +181,13 @@
     <AndroidResource Include="Resources\menu\toolbar_menu.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\tab_base.axml" />
+    <AndroidResource Include="Resources\layout\base_tab.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_payresult.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_pay.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\btngroup.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\btn_ripple_effect_light.xml" />
@@ -230,6 +227,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\app_jenius_logo_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\base_platform.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
