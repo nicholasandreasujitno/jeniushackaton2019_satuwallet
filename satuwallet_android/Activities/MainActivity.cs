@@ -111,7 +111,8 @@ namespace satuwallet_android.Activities
         {
             var adapter = new Adapters.MainPagerAdapter(fragmentManager);
             adapter.AddFragment(new HomeFragment(), "Home", Resource.Drawable.ic_home_white_24dp);
-            adapter.AddFragment(new EasyRegisterFragment(), "Easy Register", Resource.Drawable.ic_telp_white_24dp);
+            adapter.AddFragment(new EasyRegisterFragment(), "Platform", Resource.Drawable.ic_baseline_add_24dp);
+            adapter.AddFragment(new UserFragment(), "User", Resource.Drawable.ic_baseline_face_24px);
             viewPager1.Adapter = adapter;
             viewPager1.Adapter.NotifyDataSetChanged();
         }

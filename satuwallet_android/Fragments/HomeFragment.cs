@@ -12,7 +12,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using satuwallet_android.Activities;
+using satuwallet_android.Constants;
 using V4Fragment = Android.Support.V4.App.Fragment;
+using V7GridLayout = Android.Support.V7.Widget.GridLayout;
 
 namespace satuwallet_android.Fragments
 {
@@ -32,6 +34,18 @@ namespace satuwallet_android.Fragments
 
             View view = inflater.Inflate(Resource.Layout.frag_home, container, false);
 
+
+            var vwPlatformContainer = view.FindViewById<V7GridLayout>(Resource.Id.home_vwPlatformContainer);
+
+            var totalPlatform = (Enum.GetNames(typeof(Platform))).Length;
+            //var i = 0;
+            foreach (var p in Enum.GetValues(typeof(Platform)))
+            {
+                View vwChild = inflater.Inflate(Resource.Layout.base_platform, null);
+
+                vwPlatformContainer.AddView(vwChild);
+                //i++;
+            }
 
             var vwPay = view.FindViewById(Resource.Id.home_vwPay);
             vwPay.Click += VwPay_Click;
