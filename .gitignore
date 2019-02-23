@@ -1,0 +1,62 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+IdeInk_Api_Token/[Dd]ebug/
+IdeInk_Api_Token/[Dd]ebugPublic/
+IdeInk_Api_Token/[Rr]elease/
+IdeInk_Api_Token/[Rr]eleases/
+IdeInk_Api_Token/x64/
+IdeInk_Api_Token/x86/
+IdeInk_Api_Token/bld/
+IdeInk_Api_Token/[Bb]in/
+IdeInk_Api_Token/[Oo]bj/
+IdeInk_Api_Token/[Ll]og/
+#IdeInk_Api_Token/[Pp]roperties/PublishProfiles/
+
+# Xamarin Build results
+.idea/
+
+# Visual Studio 2015/2017 cache/options directory
+/.vs
+.vs/
+.vs/config/applicationhost.config
+.vs/IdeInk_Api_Token/v14/
+.vs/IdeInk_Api_Token/v14/.suo
+
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
