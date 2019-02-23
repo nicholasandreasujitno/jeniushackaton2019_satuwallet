@@ -60,17 +60,18 @@ namespace satuwallet_android.Activities
                 decimal amm = ((i + (new RandomGenerator(DateTime.Now)).RandomInt(3)) * 100);
                 transactions.Add(new Transaction()
                 {
-                    FromPlatform = Constants.Platform.OVO,
+                    FromPlatform = fromP,
+                    ToPlatform = toP,
                     Description1 = fromP.ToString(),
-                    Description2 = actT.ToString() + " " + msg,
-                    Ammount = (actT == ActionTypes.Penerimaan) ? amm : -amm,
+                    Description2 = actT.ToString() + " " + (actT == ActionTypes.Penerimaan ? "dari" : "ke") + "  " + msg,
+                    Ammount = (actT == ActionTypes.Penerimaan) ? -amm : amm,
                 });
             }
 
             var adapter = new HistoryTransactionAdapter(this, transactions);
             mLvTransaction.Adapter = adapter;
         }
-        
+
         private Platform GetPlatformByRandom(Random rnd)
         {
             var i = rnd.Next(1, 5); // creates a number between 1 and 4
@@ -120,6 +121,6 @@ namespace satuwallet_android.Activities
             }
             return base.OnOptionsItemSelected(item);
         }
-        
+
     }
 }

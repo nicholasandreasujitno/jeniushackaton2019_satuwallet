@@ -75,16 +75,21 @@ namespace satuwallet_android.Activities
 
             RestService restService = new RestService(true);
 
-            var prs = restService.Post<List<PlatformRegistration>>(ApiUrl.Platform_FetchActivePlatforms, "");
-            if (prs.Count > 0)
-            {
-                var db = DbContext.GetConnection();
-                foreach (var pr in prs)
+            try { 
+                var prs = restService.Post<List<PlatformRegistration>>(ApiUrl.Platform_FetchActivePlatforms, "");
+                if (prs.Count > 0)
                 {
-                    db.InsertOrReplace(pr);
+                    var db = DbContext.GetConnection();
+                    foreach (var pr in prs)
+                    {
+                        db.InsertOrReplace(pr);
+                    }
                 }
             }
-
+            catch(Exception e)
+            {
+                this.ShowDialog("Error", "Error on loading active platforms", "Ok");
+            }
             //Typeface customFont = Typeface.CreateFromAsset(this.Assets, "fonts/Calibri.ttf");
             //SupportActionBar.setTypeface(customFont);
 
