@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/pay_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@color/colorPrimary"
+			android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+			app:titleTextAppearance="@style/AppTheme.Toolbar.Title" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<SurfaceView
+				android:id="@+id/cameraView"
+				android:layout_width="match_parent"
+				android:layout_height="380dp"
+				android:layout_centerInParent="true" />
+
+			<TextView
+				android:layout_centerInParent="true"
+				android:gravity="center_horizontal"
+				android:id="@+id/txtResult"
+				android:layout_below="@+id/cameraView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Please focus Camera to Barcode and QR Code"
+				android:textStyle="italic"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="25dp" />
+
+			
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			
+			<TextView 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:text="Platform"
+				android:textStyle="bold" />
+
+			<RadioGroup
+				android:id="@+id/pay_rdgPlatform"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:orientation="horizontal">
+
+			<!--<RadioButton
+				android:id="@+id/radioMale"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="test1" 
+				android:checked="true" />
+
+			<RadioButton
+				android:id="@+id/radioFemale"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="test2" />-->
+
+			</RadioGroup>
+
+		</LinearLayout>
+
+		</LinearLayout>
+		
+	</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

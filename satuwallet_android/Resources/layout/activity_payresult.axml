@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/payresult_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="@color/colorPrimary"
+			android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+			app:titleTextAppearance="@style/AppTheme.Toolbar.Title" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:padding="20dp">
+						
+			<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="To: " />
+
+			<TextView 
+			android:id="@+id/payresult_tvToMobileNo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="-"
+			android:textSize="@dimen/abc_text_size_large_material" />
+			
+			<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="Platform" />
+
+			<TextView 
+			android:id="@+id/payresult_tvPlatform"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="-" />
+						
+			<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="Pay With" />
+						
+			<android.support.v7.widget.AppCompatSpinner
+				android:id="@+id/payresult_spPlatform"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal" />
+		
+			<!--<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:text="- DROPDOWN -" />-->
+			
+			<Button
+			android:id="@+id/payresult_btnPay"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/btn_ripple_effect_light" 
+			android:text="Pay" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

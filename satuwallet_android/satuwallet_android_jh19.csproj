@@ -57,9 +57,13 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\HistoryActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\PayActivity.cs" />
+    <Compile Include="Activities\PayResultActivity.cs" />
     <Compile Include="Activities\RegisterActivity.cs" />
+    <Compile Include="Activities\WalletActivity.cs" />
     <Compile Include="Adapters\MainPagerAdapter.cs" />
     <Compile Include="Constants\ApiUrl.cs" />
     <Compile Include="Constants\Platform.cs" />
@@ -124,6 +128,9 @@
       <Version>1.5.231</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Vision">
+      <Version>60.1142.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_register.axml" />
@@ -175,6 +182,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\tab_base.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_payresult.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_pay.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\btngroup.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\btn_ripple_effect_light.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_wallet.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_history.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
