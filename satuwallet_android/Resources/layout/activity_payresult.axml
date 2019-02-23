@@ -27,6 +27,7 @@
 			<TextView 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
 			android:layout_gravity="center_horizontal"
 			android:text="To: " />
 
@@ -41,6 +42,7 @@
 			<TextView 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
 			android:layout_gravity="center_horizontal"
 			android:text="Platform" />
 
@@ -54,6 +56,7 @@
 			<TextView 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
 			android:layout_gravity="center_horizontal"
 			android:text="Pay With" />
 						
@@ -73,6 +76,7 @@
 			android:id="@+id/payresult_btnPay"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
 			android:background="@drawable/btn_ripple_effect_light" 
 			android:text="Pay" />
 

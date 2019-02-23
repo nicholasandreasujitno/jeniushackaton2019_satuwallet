@@ -85,13 +85,17 @@ namespace satuwallet_android.Fragments
                         continue;
                     }
                 }
+
                 View vwChild = mInflater.Inflate(Resource.Layout.base_platform, null);
                 var vwIcon = vwChild.FindViewById<ImageView>(Resource.Id.baseplatform_icon);
                 vwIcon.SetImageResource(p.GetLogoResId());
 
                 var vwTitle = vwChild.FindViewById<TextView>(Resource.Id.baseplatform_title);
                 vwTitle.Text = "" + p.ToString();
-
+                
+                var vwBalance = vwChild.FindViewById<TextView>(Resource.Id.baseplatform_balance);
+                vwBalance.Text = "(Not Registered)";
+                
                 var vwPId = vwChild.FindViewById<TextView>(Resource.Id.baseplatform_id);
                 vwPId.Text = "" + (int)p;
 

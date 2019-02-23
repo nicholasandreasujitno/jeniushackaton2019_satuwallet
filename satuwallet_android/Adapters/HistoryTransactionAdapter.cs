@@ -59,7 +59,7 @@ namespace satuwallet_android.Adapters
 
             tvDescription1.Text = transactions[position].FromPlatform.ToString();
             tvDescription2.Text = transactions[position].Description2 + "";
-            tvAmmount.Text = string.Format("{0:n0}", transactions[position].Ammount);
+            tvAmmount.Text = (transactions[position].Ammount >= 0 ? "" : "-") + string.Format("{0:n0}", transactions[position].Ammount);
 
             return view;
         }

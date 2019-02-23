@@ -56,7 +56,9 @@ namespace satuwallet_android.Activities
             ArrayAdapter<String> adapter = new ArrayAdapter<string>(this, Resource.Layout.support_simple_spinner_dropdown_item, spinnerArray);
             adapter.SetDropDownViewResource(Resource.Layout.support_simple_spinner_dropdown_item);
             spPlatform.SetAdapter(adapter);
-            
+
+            spPlatform.SetSelection(0);
+
             var btnPay = FindViewById(Resource.Id.payresult_btnPay);
             btnPay.Click += BtnPay_Click;
         }

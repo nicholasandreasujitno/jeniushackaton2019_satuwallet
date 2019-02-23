@@ -29,10 +29,10 @@ namespace satuwallet_android.Activities
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_myqr);
 
             //SupportActionBar  
-            toolbar = FindViewById<V7Toolbar>(Resource.Id.main_toolbar);
+            toolbar = FindViewById<V7Toolbar>(Resource.Id.myqr_toolbar);
             SetSupportActionBar(toolbar);
 
             SupportActionBar.SetDisplayShowTitleEnabled(false);

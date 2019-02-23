@@ -18,7 +18,7 @@ namespace satuwallet_android.Models
         public Platform Platform { get; set; }
     }
 
-        public class PlatformRegistration
+    public class PlatformRegistration
     {
         public long Id { get; set; }
 
