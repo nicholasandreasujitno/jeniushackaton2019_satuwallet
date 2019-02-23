@@ -21,14 +21,14 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/basehistoryrow_tvPlatform"
+                android:id="@+id/basehistoryrow_tvDescription1"
                 android:textStyle="bold"
                 android:text="Platform Name" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/basehistoryrow_tvDescription"
+                android:id="@+id/basehistoryrow_tvDescription2"
                 android:text="-" />
 
         </LinearLayout>

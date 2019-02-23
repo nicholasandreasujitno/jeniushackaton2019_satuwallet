@@ -46,19 +46,19 @@ namespace satuwallet_android.Adapters
 
         public override long GetItemId(int position)
         {
-            return (int)transactions[position].Platform;
+            return (int)transactions[position].Id;
         }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.base_history_list_row, parent, false);
 
-            var tvPlatform = view.FindViewById<TextView>(Resource.Id.basehistoryrow_tvPlatform);
-            var tvDescription = view.FindViewById<TextView>(Resource.Id.basehistoryrow_tvDescription);
+            var tvDescription1 = view.FindViewById<TextView>(Resource.Id.basehistoryrow_tvDescription1);
+            var tvDescription2 = view.FindViewById<TextView>(Resource.Id.basehistoryrow_tvDescription2);
             var tvAmmount = view.FindViewById<TextView>(Resource.Id.basehistoryrow_tvAmmount);
 
-            tvPlatform.Text = transactions[position].Platform.ToString();
-            tvDescription.Text = transactions[position].Description + "";
+            tvDescription1.Text = transactions[position].FromPlatform.ToString();
+            tvDescription2.Text = transactions[position].Description2 + "";
             tvAmmount.Text = string.Format("{0:n0}", transactions[position].Ammount);
 
             return view;

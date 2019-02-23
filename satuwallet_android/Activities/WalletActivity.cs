@@ -46,7 +46,7 @@ namespace satuwallet_android.Activities
             spFromPlatform.SetAdapter(adapter);
             spToPlatform.SetAdapter(adapter);
         }
-
+        
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             if (item.ItemId == Android.Resource.Id.Home)

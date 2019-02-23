@@ -45,7 +45,7 @@ namespace satuwallet_android.Models
 
         public bool IsExpired()
         {
-            if (DateTime.UtcNow < ExpiredDateUtc)
+            if (DateTime.UtcNow < ExpiredDateUtc.AddMinutes(-8))
             {
                 return false;
             }

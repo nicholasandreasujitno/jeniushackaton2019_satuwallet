@@ -161,21 +161,21 @@ namespace satuwallet_android.Helpers
             return token;
         }
 
-        public static void ClearToken()
-        {
-            var database = DbContext.GetConnection();
-            database.BeginTransaction();
-            try
-            {
-                database.Execute("DELETE FROM Token");
-                //database.Execute("DELETE FROM User");
-                database.Commit();
-            }
-            catch (Exception ex)
-            {
-                database.Rollback();
-                throw ex;
-            }
-        }
+        //public static void ClearToken()
+        //{
+        //    var database = DbContext.GetConnection();
+        //    database.BeginTransaction();
+        //    try
+        //    {
+        //        database.Execute("DELETE FROM Token");
+        //        //database.Execute("DELETE FROM User");
+        //        database.Commit();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        database.Rollback();
+        //        throw ex;
+        //    }
+        //}
     }
 }

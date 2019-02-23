@@ -28,6 +28,8 @@ namespace satuwallet_android.Models
             {
                 database.CreateTable<Token>();
                 database.CreateTable<User>();
+                database.CreateTable<PlatformRegistration>();
+                database.CreateTable<UserRecord>();
                 database.Commit();
             }
             catch (Exception ex)
@@ -37,6 +39,26 @@ namespace satuwallet_android.Models
             }
             //    tran.Complete();
             //}
+        }
+
+        public static void ClearTable()
+        {
+
+            var database = DbContext.GetConnection();
+            database.BeginTransaction();
+            try
+            {
+                database.Execute("DELETE FROM Token");
+                database.Execute("DELETE FROM User");
+                database.Execute("DELETE FROM PlatformRegistration");
+                database.Execute("DELETE FROM UserRecord");
+                database.Commit();
+            }
+            catch (Exception ex)
+            {
+                database.Rollback();
+                throw ex;
+            }
         }
 
         public static SQLiteConnection GetConnection()

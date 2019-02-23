@@ -15,7 +15,9 @@ namespace satuwallet_android.Constants
     public enum ActionTypes
     {
         Pay = 0,
-        Transfer = 11,
+        Transfer = 4,
+        Received = 7,
+
         Withdraw = 21,
         Deposit = 27
     }

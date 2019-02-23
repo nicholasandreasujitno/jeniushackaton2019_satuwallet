@@ -11,6 +11,7 @@
     app:cardCornerRadius="@dimen/button_radius_small">
 
     <LinearLayout
+        android:id="@+id/baseplatform_vwBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 		android:padding="25dp"

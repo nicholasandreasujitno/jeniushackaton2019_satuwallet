@@ -46,8 +46,9 @@ namespace satuwallet_android.Activities
                 decimal amm = ((i + (new RandomGenerator(DateTime.Now)).RandomInt(3)) * 100);
                 transactions.Add(new Transaction()
                 {
-                    Platform = Constants.Platform.OVO,
-                    Description = "" + i,
+                    FromPlatform = Constants.Platform.OVO,
+                    Description1 = "" + Constants.Platform.OVO,
+                    Description2 = "" + i,
                     Ammount = amm
                 });
             }
@@ -55,7 +56,7 @@ namespace satuwallet_android.Activities
             var adapter = new HistoryTransactionAdapter(this, transactions);
             mLvTransaction.Adapter = adapter;
         }
-
+        
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             if (item.ItemId == Android.Resource.Id.Home)
@@ -64,5 +65,6 @@ namespace satuwallet_android.Activities
             }
             return base.OnOptionsItemSelected(item);
         }
+        
     }
 }

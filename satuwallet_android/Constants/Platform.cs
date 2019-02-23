@@ -22,20 +22,20 @@ namespace satuwallet_android.Constants
 
     public static class PlatformExt
     {
-        static Dictionary<Platform, string> dictPlatformLogo = new Dictionary<Platform, string>()
+        static Dictionary<Platform, int> dictPlatformLogo = new Dictionary<Platform, int>()
         {
-            { Platform.OVO, "platform_ovo" },
-            { Platform.GoPay, "platform_gopay" },
-            { Platform.DANA, "platform_dana" }
+            { Platform.OVO, Resource.Drawable.platform_ovo },
+            { Platform.GoPay, Resource.Drawable.platform_gopay },
+            { Platform.DANA, Resource.Drawable.platform_dana }
         };
 
-        public static string GetLogoPath(this Platform p)
+        public static int GetLogoResId(this Platform p)
         {
             if (dictPlatformLogo.ContainsKey(p))
             {
                 return dictPlatformLogo[p];
             }
-            return "platform_default";
+            return Resource.Drawable.platform_default;
         }
 
         public static Dictionary<Platform, string> GetKeyValue()

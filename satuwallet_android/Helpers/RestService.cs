@@ -20,6 +20,7 @@ using satuwallet_android.Activities;
 using satuwallet_android.Constants;
 using satuwallet_android.Extensions;
 using satuwallet_android.Interfaces;
+using V4Fragment = Android.Support.V4.App.Fragment;
 
 namespace satuwallet_android.Helpers
 {
@@ -81,6 +82,11 @@ namespace satuwallet_android.Helpers
             var objResult = ProcessResponse<T>(response);
             return objResult;
         }
+        public void Get(string url, IResponseAction rAction)
+        {
+            var response = GetAsync(url);
+            ProcessResponse(response, rAction);
+        }
 
 
         public HttpResponseMessage Post(string url, string objJson)
@@ -112,6 +118,11 @@ namespace satuwallet_android.Helpers
             var response = Post(url, objJson);
             var objResult = ProcessResponse<T>(response);
             return objResult;
+        }
+        public void Post(string url, string objJson, IResponseAction rAction)
+        {
+            var response = Post(url, objJson);
+            ProcessResponse(response, rAction);
         }
 
         public HttpResponseMessage Post(string url, FormUrlEncodedContent obj)
@@ -158,8 +169,19 @@ namespace satuwallet_android.Helpers
                         rAction.OnBadRequest(msgResult);
                         break;
                     case HttpStatusCode.Unauthorized:
+                        //if (TokenManager.IsExist()) { 
+                        //    TokenManager.GenerateRefreshToken();
+                        //}
                         var msgResult2 = response.Content.ReadAsStringAsync().Result;
                         rAction.OnUnauthorized(msgResult2);
+
+                        // JUST FORCE LOGOUT
+                        
+                        //if (currentActivity.GetType() == typeof(AppCompatActivity))
+                        //{
+                        //    var activity = (AppCompatActivity)actionPage;
+                        //currentActivity.RunOnUiThread(() => GoBackToLogin(currentActivity));
+                        //}
                         break;
                     //case HttpStatusCode.InternalServerError:
                     //    var msgResult2 = response.Content.ReadAsStringAsync().Result;
@@ -179,6 +201,8 @@ namespace satuwallet_android.Helpers
 
         public T ProcessResponse<T>(HttpResponseMessage response) where T : class
         {
+            //Activity currentActivity = ((MyApp)Application.Context).GetCurrentActivity();
+            //var a1 = currentActivity.GetType();
             var actionPage = Application.Context;
             try
             {
@@ -207,9 +231,7 @@ namespace satuwallet_android.Helpers
                         if (actionPage.GetType() == typeof(AppCompatActivity))
                         {
                             var activity = (AppCompatActivity)actionPage;
-                            var i = new Intent(Application.Context, typeof(LoginActivity));
-                            activity.StartActivity(i);
-                            activity.FinishAffinity();
+                            activity.RunOnUiThread(() => GoBackToLogin(activity));
                         }
                         break;
                     default:
@@ -245,6 +267,13 @@ namespace satuwallet_android.Helpers
             }
             var content = new FormUrlEncodedContent(postData);
             return content;
+        }
+
+        public void GoBackToLogin(Activity activity)
+        {
+            var i = new Intent(Application.Context, typeof(LoginActivity));
+            activity.StartActivity(i);
+            activity.FinishAffinity();
         }
     }
 }

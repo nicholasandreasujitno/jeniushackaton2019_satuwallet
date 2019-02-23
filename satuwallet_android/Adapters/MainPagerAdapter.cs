@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.Lang;
+using satuwallet_android.Fragments;
 using V4Fragment = Android.Support.V4.App.Fragment;
 using V4FragmentManager = Android.Support.V4.App.FragmentManager;
 
@@ -57,5 +59,21 @@ namespace satuwallet_android.Adapters
         {
             return fragments[position];
         }
+
+        public override void SetPrimaryItem(ViewGroup container, int position, Java.Lang.Object @object)
+        {
+            if (fragments[position].GetType() == typeof(HomeFragment))
+            {
+                var fr = (HomeFragment)fragments[position];
+                fr.GenerateChildren();
+            }
+            else if (fragments[position].GetType() == typeof(EasyRegisterFragment))
+            {
+                var fr = (EasyRegisterFragment)fragments[position];
+                fr.GenerateChildren();
+            }
+
+            base.SetPrimaryItem(container, position, @object);
+        }        
     }
 }

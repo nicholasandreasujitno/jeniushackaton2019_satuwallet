@@ -33,7 +33,7 @@ namespace satuwallet_android
             //StartActivity(i);
             //Finish();
         }
-        
+
         protected override void OnStart()
         {
             var isLoggedIn = IsStillLoggedIn();

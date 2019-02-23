@@ -16,8 +16,24 @@ namespace satuwallet_android.Models
     public class Transaction
     {
         public int Id { get; set; }
-        public Platform Platform { get; set; }
-        public string Description { get; set; }
+
+        public DateTime CreatedDateUtc { get; set; }
+
+        public string Description1 { get; set; }
+
+        public string Description2 { get; set; }
+
+
+        public ActionTypes ActionType { get; set; }
+        
+        public Platform FromPlatform { get; set; }
+
+        public UserRecord MeUser { get; set; }
+
+        public Platform ToPlatform { get; set; }
+        
+        public UserRecord OtherUser { get; set; }
+
         public decimal Ammount { get; set; }
 
     }

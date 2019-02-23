@@ -13,6 +13,7 @@ using Android.Views;
 using Android.Widget;
 using satuwallet_android.Constants;
 using satuwallet_android.Helpers;
+using satuwallet_android.Interfaces;
 using satuwallet_android.Models;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -39,7 +40,7 @@ namespace satuwallet_android.Activities
             SupportActionBar.SetDisplayShowTitleEnabled(false);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //SupportActionBar.SetDisplayShowHomeEnabled(true);
-            
+
             var btnRegister = FindViewById<Button>(Resource.Id.register_btnRegister);
             btnRegister.Click += BtnRegister_Click;
         }
@@ -106,8 +107,38 @@ namespace satuwallet_android.Activities
 
             var data = restService.ConvertToJson(userBinding);
             var httpResponse = restService.Post(ApiUrl.Account_Register, data);
-            //restService.ProcessResponse(httpResponse, new RegisterResponse());
+            restService.ProcessResponse(httpResponse, new RegisterResponse());
         }
-        
+
+        private class RegisterResponse : IResponseAction
+        {
+            public void OnBadRequest(string errorMessage)
+            {
+                //App.Current.MainPage.DisplayAlert("Register Failed", "Error, " + errorMessage, "Ok");
+                thisPage.ShowDialog("Register Failed", "Error, " + errorMessage, "Ok");
+            }
+
+            public void OnError(HttpResponseMessage responseMessage)
+            {
+                var msgResult = responseMessage.Content.ReadAsStringAsync().Result;
+                thisPage.ShowDialog("Register Failed", "Register Failed. Server Error, " + responseMessage.StatusCode + ", " + msgResult, "Ok");
+            }
+
+            public void OnLocalError(Exception e)
+            {
+                thisPage.ShowDialog("Register Failed", "Register Failed. Error, " + e.Message, "Ok");
+            }
+
+            public void OnOk(string rawData)
+            {
+                thisPage.ShowDialog("Register Failed", "Register Success", "Ok");
+                thisPage.Finish();
+            }
+
+            public void OnUnauthorized(string errorMessage)
+            {
+
+            }
+        }
     }
 }

@@ -83,6 +83,18 @@ namespace satuwallet_android.Activities
                 //rb.SetTextSize(ComplexUnitType.Dip, 25);
                 mRdgPlatform.AddView(rb);
             }
+
+
+            var btnMyQR = FindViewById<Button>(Resource.Id.pay_btnMyQR);
+            btnMyQR.Click += BtnMyQR_Click;
+
+
+        }
+
+        private void BtnMyQR_Click(object sender, EventArgs e)
+        {
+            var i = new Intent(Application.Context, typeof(MyQRActivity));
+            StartActivity(i);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

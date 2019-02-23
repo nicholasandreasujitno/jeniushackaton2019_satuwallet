@@ -19,6 +19,11 @@ using Android.Content;
 using System;
 using Android.Support.V4.Content;
 
+using System.Threading.Tasks;
+using satuwallet_android.Constants;
+using System.Net.Http;
+using satuwallet_android.Interfaces;
+using satuwallet_android.Models;
 using V4Fragment = Android.Support.V4.App.Fragment;
 using V4FragmentManager = Android.Support.V4.App.FragmentManager;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
@@ -33,18 +38,15 @@ namespace satuwallet_android.Activities
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity, TabLayout.IOnTabSelectedListener
     {
-        private static AppCompatActivity thisPage;
         private V7Toolbar toolbar;
         //private ActionBar ab;
-        private ViewPager viewpager;
+        private ViewPager mViewpager;
         //private MenuPagerAdapter adapter;
         private V4FragmentManager fragmentManager;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            thisPage = this;
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
@@ -71,6 +73,18 @@ namespace satuwallet_android.Activities
                 }
             }
 
+            RestService restService = new RestService(true);
+
+            var prs = restService.Post<List<PlatformRegistration>>(ApiUrl.Platform_FetchActivePlatforms, "");
+            if (prs.Count > 0)
+            {
+                var db = DbContext.GetConnection();
+                foreach (var pr in prs)
+                {
+                    db.InsertOrReplace(pr);
+                }
+            }
+
             //Typeface customFont = Typeface.CreateFromAsset(this.Assets, "fonts/Calibri.ttf");
             //SupportActionBar.setTypeface(customFont);
 
@@ -79,14 +93,14 @@ namespace satuwallet_android.Activities
             fragmentManager = this.SupportFragmentManager;
 
             //ViewPager  
-            viewpager = FindViewById<ViewPager>(Resource.Id.main_view_pager);
-            SetupViewPager(viewpager); //Calling SetupViewPager Method  
+            mViewpager = FindViewById<ViewPager>(Resource.Id.main_view_pager);
+            SetupViewPager(mViewpager); //Calling SetupViewPager Method  
                                        //TabLayout  
             var tabLayout = FindViewById<TabLayout>(Resource.Id.main_tab_layout);
-            tabLayout.SetupWithViewPager(viewpager);
+            tabLayout.SetupWithViewPager(mViewpager);
             tabLayout.AddOnTabSelectedListener(this);
 
-            SetupTabs((MainPagerAdapter)viewpager.Adapter, tabLayout);
+            SetupTabs((MainPagerAdapter)mViewpager.Adapter, tabLayout);
             //FloatingActionButton  
             //var fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             //fab.Click += (sender, e) => {
@@ -105,8 +119,21 @@ namespace satuwallet_android.Activities
             //vp.Adapter = adapter;
 
             //AddTabs();
-        }
 
+
+            //Task.Run(() =>
+            //{
+            //    RestService restService = new RestService(true);
+
+            //    var prs = restService.Post<List<PlatformRegistration>>(ApiUrl.Platform_FetchActivePlatforms, "");
+            //    RunOnUiThread(() => {
+            //        DbContext.GetConnection().Insert(prs); 
+
+            //        var adapter = (MainPagerAdapter) viewPager.Adapter;
+            //    });
+            //});
+        }
+        
         void SetupViewPager(ViewPager viewPager1)
         {
             var adapter = new Adapters.MainPagerAdapter(fragmentManager);
@@ -131,7 +158,7 @@ namespace satuwallet_android.Activities
                 tabLayout.GetTabAt(i).SetCustomView(view1);
                 isActive = false;
             }
-            
+
             //View view2 = LayoutInflater.Inflate(Resource.Layout.tab_base, null);
             //view2.FindViewById(Resource.Id.basetab_icon).SetBackgroundResource(adapter.GetIconResId(1));
             //view2.FindViewById<TextView>(Resource.Id.basetab_title).Text = adapter.GetPageTitleFormatted(1).ToString();
@@ -160,7 +187,8 @@ namespace satuwallet_android.Activities
             switch (item.ItemId)
             {
                 case Resource.Id.menu_logout:
-                    TokenManager.ClearToken();
+                    //TokenManager.ClearToken();
+                    DbContext.ClearTable();
 
                     var i = new Intent(Application.Context, typeof(LoginActivity));
                     StartActivity(i);
@@ -174,12 +202,11 @@ namespace satuwallet_android.Activities
 
         public void OnTabReselected(TabLayout.Tab tab)
         {
-            Toast.MakeText(this, "OnTabReselected" + tab.Text, ToastLength.Short).Show();
+            //Toast.MakeText(this, "OnTabReselected" + tab.Text, ToastLength.Short).Show();
         }
 
         public void OnTabSelected(TabLayout.Tab tab)
         {
-
             ChangeTabBaseStyle(tab.CustomView, true);
 
             //Toast.MakeText(this, "OnTabSelected" + tab.Text, ToastLength.Short).Show();
@@ -189,7 +216,7 @@ namespace satuwallet_android.Activities
         {
             ChangeTabBaseStyle(tab.CustomView, false);
 
-            Toast.MakeText(this, "OnTabUnselected" + tab.Text, ToastLength.Short).Show();
+            //Toast.MakeText(this, "OnTabUnselected" + tab.Text, ToastLength.Short).Show();
         }
 
         void ChangeTabBaseStyle(View tabCustomview, bool isActive)
@@ -214,7 +241,7 @@ namespace satuwallet_android.Activities
 
             tabCustomview.FindViewById<TextView>(Resource.Id.basetab_title).SetTextColor(color1);
         }
-
+        
         //private void Vp_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
         //{
         //    ab.SetSelectedNavigationItem(e.Position);
